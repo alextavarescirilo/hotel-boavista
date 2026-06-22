@@ -1,375 +1,335 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hotel Boavista</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-:root{
-    --gold:#C9A86A;
-    --beige:#F5EFE6;
-    --dark:#2B2B2B;
-    --white:#FFFFFF;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Poppins',sans-serif;
-    color:var(--dark);
-    background:var(--white);
-    line-height:1.6;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-/* MENU */
-
-header{
-    position:fixed;
-    width:100%;
-    top:0;
-    left:0;
-    z-index:1000;
-    background:rgba(255,255,255,0.95);
-    backdrop-filter:blur(10px);
-    box-shadow:0 2px 15px rgba(0,0,0,0.08);
-}
-
-.navbar{
-    max-width:1200px;
-    margin:auto;
-    padding:18px 30px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    font-family:'Playfair Display', serif;
-    font-size:1.8rem;
-    color:var(--gold);
-    font-weight:bold;
-}
-
-.nav-links{
-    display:flex;
-    gap:25px;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:var(--dark);
-    font-weight:500;
-    transition:.3s;
-}
-
-.nav-links a:hover{
-    color:var(--gold);
-}
-
-/* HERO */
-
-.hero{
-    height:100vh;
-    background:
-    linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
-    url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-}
-
-.hero-content{
-    max-width:800px;
-    padding:20px;
-}
-
-.hero h1{
-    font-family:'Playfair Display', serif;
-    font-size:4rem;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:1.2rem;
-    margin-bottom:30px;
-}
-
-.btn{
-    display:inline-block;
-    background:var(--gold);
-    color:white;
-    padding:14px 32px;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* SECTIONS */
-
-section{
-    padding:90px 20px;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.section-title h2{
-    font-family:'Playfair Display', serif;
-    color:var(--gold);
-    font-size:2.5rem;
-}
-
-/* ABOUT */
-
-.about{
-    background:var(--beige);
-    text-align:center;
-}
-
-.about p{
-    max-width:800px;
-    margin:auto;
-    font-size:1.1rem;
-}
-
-/* FEATURES */
-
-.features-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.feature-card{
-    padding:35px;
-    text-align:center;
-    border-radius:15px;
-    background:white;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-    transition:.3s;
-}
-
-.feature-card:hover{
-    transform:translateY(-5px);
-}
-
-.feature-icon{
-    font-size:2.5rem;
-    margin-bottom:15px;
-}
-
-/* GALLERY */
-
-.gallery{
-    background:var(--beige);
-}
-
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
-}
-
-.gallery-grid img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:15px;
-}
-
-/* CTA */
-
-.cta{
-    text-align:center;
-    background:var(--gold);
-    color:white;
-}
-
-.cta h2{
-    font-family:'Playfair Display', serif;
-    margin-bottom:15px;
-    font-size:2.5rem;
-}
-
-.cta p{
-    margin-bottom:25px;
-}
-
-/* FOOTER */
-
-footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:40px 20px;
-}
-
-footer p{
-    margin:8px 0;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-    font-size:2.8rem;
-}
-
-.nav-links{
-    display:none;
-}
-
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Boavista - Melgaço</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-    <div class="navbar">
-        <div class="logo">Hotel Boavista</div>
+<!-- TOP HEADER WITH SOCIAL & CONTACT -->
+<div class="top-header">
+    <div class="top-header-content">
+        <div class="social-icons">
+            <a href="#instagram" title="Instagram" aria-label="Instagram">📷</a>
+            <a href="#facebook" title="Facebook" aria-label="Facebook">f</a>
+            <a href="#youtube" title="YouTube" aria-label="YouTube">▶️</a>
+            <a href="#linkedin" title="LinkedIn" aria-label="LinkedIn">in</a>
+        </div>
 
-        <nav class="nav-links">
-            <a href="#">Início</a>
-            <a href="#">Quartos</a>
-            <a href="#">Galeria</a>
-            <a href="#">Serviços</a>
-            <a href="#">Contactos</a>
-        </nav>
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Hotel Boavista Logo" style="max-width: 80px; height: auto;">
+            </a>
+        </div>
+
+        <div class="header-right">
+            <div class="phone-contact">
+                <span>📞 +351 251 XXX XXX</span>
+            </div>
+            <a href="#reservar" class="btn-reserva">Reservar</a>
+            <div class="language-dropdown">
+                <button class="lang-toggle">🌐 PT ▼</button>
+                <ul class="lang-menu">
+                    <li><a href="#pt">PT</a></li>
+                    <li><a href="#en">EN</a></li>
+                    <li><a href="#es">ES</a></li>
+                    <li><a href="#fr">FR</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
+</div>
+
+<!-- MAIN NAVIGATION HEADER -->
+<header class="main-header">
+    <nav class="main-nav">
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="historia.html" class="nav-link">HISTÓRIA</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#hoteis" class="nav-link">HOTÉIS <span class="dropdown-arrow">▼</span></a>
+                <div class="submenu-hotels">
+                    <div class="submenu-item">
+                        <h4>Boavista I</h4>
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=250&q=80" alt="Boavista I">
+                        <a href="boavista-1.html">Ver mais</a>
+                    </div>
+                    <div class="submenu-item">
+                        <h4>Boavista II</h4>
+                        <img src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=250&q=80" alt="Boavista II">
+                        <a href="boavista-2.html">Ver mais</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="restaurante.html" class="nav-link">RESTAURANTE</a>
+            </li>
+            <li class="nav-item">
+                <a href="packs.html" class="nav-link">PACKS E OFERTAS</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#experiencias" class="nav-link">EXPERIÊNCIAS <span class="dropdown-arrow">▼</span></a>
+                <ul class="submenu">
+                    <li><a href="experiencias.html#visitar">O que visitar em Melgaço</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="contactos.html" class="nav-link">CONTACTOS</a>
+            </li>
+        </ul>
+    </nav>
 </header>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Hotel Boavista</h1>
-        <p>Onde o conforto encontra a elegância.</p>
-        <a href="#" class="btn">Reservar Agora</a>
+<!-- HERO SLIDER -->
+<section class="hero-slider">
+    <div class="slider-container">
+        <div class="slide active">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80" alt="Hotel Boavista">
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=1920&q=80" alt="Acomodações">
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80" alt="Restaurante">
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1486875347455-c0a7dcf5f5a4?auto=format&fit=crop&w=1920&q=80" alt="Experiências">
+        </div>
+    </div>
+
+    <!-- RESERVATION FORM -->
+    <div class="reservation-widget" id="reservar">
+        <div class="reservation-form">
+            <h3>Faça a sua Reserva</h3>
+            <form>
+                <div class="form-group">
+                    <label>Check-in</label>
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Check-out</label>
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Hóspedes</label>
+                    <select required>
+                        <option>1 Hóspede</option>
+                        <option>2 Hóspedes</option>
+                        <option>3 Hóspedes</option>
+                        <option>4+ Hóspedes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Quartos</label>
+                    <select required>
+                        <option>1 Quarto</option>
+                        <option>2 Quartos</option>
+                        <option>3 Quartos</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-search">Procurar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="slider-dots">
+        <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
     </div>
 </section>
 
-<section class="about">
-    <div class="container">
-        <div class="section-title">
-            <h2>Bem-vindo</h2>
+<!-- ABOUT SECTION -->
+<section class="about-section">
+    <div class="about-container">
+        <div class="about-content">
+            <h2>O HOTEL BOAVISTA</h2>
+            <h3>Quatro Gerações a Receber Bem</h3>
+            <p>Mais do que um hotel, o Boavista é uma história de família construída ao longo de gerações.</p>
+            <p>Com raízes que remontam às primeiras décadas do século XX, continuamos a receber cada hóspede com a mesma dedicação que sempre distinguiu a nossa casa. Entre a autenticidade de Melgaço, os vinhos Alvarinho, a natureza envolvente e o conforto dos nossos espaços, proporcionamos uma experiência tranquila e memorável no coração do Alto Minho.</p>
+            <p>Descubra um lugar onde tradição e modernidade se encontram para criar momentos únicos.</p>
+            <a href="historia.html" class="btn-cta">Conforto & Hospitalidade</a>
         </div>
-
-        <p>
-            Descubra uma estadia confortável e sofisticada.
-            No Hotel Boavista encontrará quartos acolhedores,
-            atendimento personalizado e uma localização privilegiada.
-        </p>
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=500&q=80" alt="Quartos Hotel Boavista">
+        </div>
     </div>
 </section>
 
-<section>
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Os Nossos Destaques</h2>
+<!-- ACCOMMODATIONS SECTION -->
+<section class="accommodations-section">
+    <div class="accommodations-header">
+        <h2><span class="highlight">Quartos & Suítes</span></h2>
+    </div>
+    <div class="accommodations-grid">
+        <div class="accommodation-card">
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=400&q=80" alt="Boavista I">
+            <h3><a href="boavista-1.html">Boavista I</a></h3>
         </div>
+        <div class="accommodation-card">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80" alt="Boavista II">
+            <h3><a href="boavista-2.html">Boavista II</a></h3>
+        </div>
+    </div>
+</section>
 
-        <div class="features-grid">
+<!-- GALLERY SECTION -->
+<section class="gallery-section">
+    <h2><span class="highlight">Galeria</span></h2>
+    <div class="gallery-slider">
+        <div class="gallery-slide active">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Galeria 1">
+        </div>
+        <div class="gallery-slide">
+            <img src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=800&q=80" alt="Galeria 2">
+        </div>
+        <div class="gallery-slide">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Galeria 3">
+        </div>
+    </div>
+    <div class="gallery-dots">
+        <span class="dot active" onclick="currentGallerySlide(1)"></span>
+        <span class="dot" onclick="currentGallerySlide(2)"></span>
+        <span class="dot" onclick="currentGallerySlide(3)"></span>
+    </div>
+</section>
 
-            <div class="feature-card">
-                <div class="feature-icon">🏨</div>
-                <h3>Quartos Confortáveis</h3>
-                <p>Espaços modernos e acolhedores para o seu descanso.</p>
+<!-- RESTAURANT SECTION -->
+<section class="restaurant-section">
+    <div class="restaurant-container">
+        <div class="restaurant-image">
+            <img src="https://images.unsplash.com/photo-1504674900967-a8a9b5d26c28?auto=format&fit=crop&w=500&q=80" alt="Restaurante">
+        </div>
+        <div class="restaurant-content">
+            <h2>Restaurante</h2>
+            <p>Descubra uma culinária que reflete a tradição do Alto Minho, preparada com ingredientes locais de qualidade.</p>
+            <div class="restaurant-info">
+                <p><strong>Apenas por reserva prévia</strong></p>
+                <p><strong>Jantar:</strong> 19h30 às 22h</p>
+                <p><strong>Encerrado:</strong> Domingo e Segunda</p>
             </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">📍</div>
-                <h3>Localização Ideal</h3>
-                <p>Perto dos principais pontos de interesse.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">📶</div>
-                <h3>Wi-Fi Gratuito</h3>
-                <p>Internet rápida disponível em todo o hotel.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">☕</div>
-                <h3>Pequeno-Almoço</h3>
-                <p>Comece o dia com uma refeição deliciosa.</p>
-            </div>
-
+            <a href="restaurante.html" class="btn-cta">Reservar Mesa</a>
         </div>
-
     </div>
 </section>
 
-<section class="gallery">
-
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Galeria</h2>
-        </div>
-
-        <div class="gallery-grid">
-            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80">
-            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80">
-            <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=80">
-        </div>
-
+<!-- PACKS SECTION -->
+<section class="packs-section">
+    <div class="packs-header">
+        <h2>Packs e Ofertas</h2>
+        <p>Experiências pensadas para tornar a sua estadia inesquecível</p>
     </div>
-
+    <div class="packs-container">
+        <div class="packs-list">
+            <div class="pack-item" onmouseover="showPackImage(1)">
+                <h3>Pack Lua de Mel</h3>
+                <p>Uma experiência romântica e memorável para casais.</p>
+            </div>
+            <div class="pack-item" onmouseover="showPackImage(2)">
+                <h3>Escapada de Fim de Semana</h3>
+                <p>Relaxamento e diversão em 3 dias inesquecíveis.</p>
+            </div>
+            <div class="pack-item" onmouseover="showPackImage(3)">
+                <h3>Retiro Wellness</h3>
+                <p>Repouso, meditação e bem-estar em Melgaço.</p>
+            </div>
+        </div>
+        <div class="packs-image">
+            <img id="packImage" src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=500&q=80" alt="Pack">
+            <a href="packs.html" class="pack-link"></a>
+        </div>
+    </div>
 </section>
 
-<section class="cta">
-
-    <div class="container">
-
-        <h2>Reserve a Sua Estadia</h2>
-
-        <p>
-            Faça a sua reserva diretamente connosco e desfrute da melhor experiência.
-        </p>
-
-        <a href="#" class="btn">Reservar Agora</a>
-
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonials-section">
+    <h2><span class="highlight">Testemunhos</span></h2>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <p>"Uma experiência incrível! O Hotel Boavista é um lugar mágico onde a hospitalidade é genuína."</p>
+            <p class="author">João Silva</p>
+            <p class="date">⭐⭐⭐⭐⭐</p>
+        </div>
+        <div class="testimonial-card">
+            <p>"O melhor hotel da região! Equipa atenciosa, conforto e um ambiente familial que nos conquistou."</p>
+            <p class="author">Maria Santos</p>
+            <p class="date">⭐⭐⭐⭐⭐</p>
+        </div>
+        <div class="testimonial-card">
+            <p>"Voltaremos com certeza! Um lugar perfeito para desconectar e reconnectar com a natureza."</p>
+            <p class="author">Pedro Costa</p>
+            <p class="date">⭐⭐⭐⭐⭐</p>
+        </div>
     </div>
-
 </section>
 
-<footer>
+<!-- LOCATION SECTION -->
+<section class="location-section">
+    <h2><span class="highlight">Localização</span></h2>
+    <div class="location-container">
+        <div class="location-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001.4199999999997!2d-8.583333!3d41.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41c4d4d4d4d4d4d%3A0x4d4d4d4d4d4d4d4d!2sMelga%C3%A7o!5e0!3m2!1spt!2spt!4v1234567890" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="location-info">
+            <h3>Hotel Boavista</h3>
+            <p>Melgaço, Portugal</p>
+            <p>📍 Endereço completo</p>
+            <p>📞 +351 251 XXX XXX</p>
+            <p>✉ reservas@hotelboavista.pt</p>
+        </div>
+    </div>
+</section>
 
-    <p><strong>Hotel Boavista</strong></p>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="footer-logo">
+            <img src="logo.png" alt="Hotel Boavista" style="max-width: 60px; height: auto; margin-bottom: 10px;">
+            <p class="footer-slogan">Memórias de ontem, conforto de hoje.</p>
+        </div>
 
-    <p>📍 Porto, Portugal</p>
+        <div class="footer-middle"></div>
 
-    <p>📞 +351 XXX XXX XXX</p>
+        <div class="footer-newsletter">
+            <h4>Subscreve já</h4>
+            <p>Obtenha informações sobre descontos exclusivos e os nossos eventos</p>
+            <form class="newsletter-form">
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <button type="submit" class="btn-subscribe">SUBSCREVER</button>
+            </form>
+            <div class="payment-methods">
+                <span>MB</span>
+                <span>VISA</span>
+                <span>MAESTRO</span>
+                <span>MBWAY</span>
+                <span>AMEX</span>
+                <span>TB</span>
+            </div>
+        </div>
+    </div>
 
-    <p>✉ reservas@hotelboavista.pt</p>
+    <div class="footer-links">
+        <a href="livro-reclamacoes.html">Livro de Reclamações</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="privacidade.html">Políticas e Privacidade</a>
+        <a href="termos.html">Termos e Condições</a>
+    </div>
 
+    <div class="footer-logos">
+        <!-- Logos dos parceiros serão inseridos aqui via WeTransfer -->
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Hotel Boavista Melgaço. Todos os direitos reservados. RNET: 559 e 560</p>
+    </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
