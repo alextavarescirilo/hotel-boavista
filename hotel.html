@@ -9,31 +9,84 @@
 </head>
 <body>
 
-<header>
-    <div class="logo">
-        HOTEL<br>
-        <span>BOAVISTA</span>
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-content">
+        <div class="top-bar-left">
+            <span>📞 +351 XXX XXX XXX</span>
+            <span>✉ reservas@hotelboavista.pt</span>
+        </div>
+        <div class="top-bar-right">
+            <a href="#facebook" title="Facebook">f</a>
+            <a href="#instagram" title="Instagram">📷</a>
+            <a href="#twitter" title="Twitter">𝕏</a>
+        </div>
     </div>
+</div>
 
-    <nav>
-        <a href="index.html">O Hotel</a>
-        <a href="quartos.html">Quartos</a>
-        <a href="restaurante.html">Restaurante</a>
-        <a href="eventos.html">Eventos</a>
-        <a href="galeria.html">Galeria</a>
-        <a href="contactos.html">Contactos</a>
-        <a href="#reservar" class="btn-reserva">Reservar</a>
-    </nav>
+<!-- MAIN HEADER -->
+<header class="main-header">
+    <div class="header-container">
+        <div class="logo-section">
+            <div class="logo">
+                <span class="logo-text">HOTEL</span>
+                <span class="logo-name">BOAVISTA</span>
+                <span class="logo-stars">★★★</span>
+            </div>
+        </div>
+
+        <!-- HAMBURGER MENU (Mobile) -->
+        <button class="hamburger-menu" id="hamburgerBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- MAIN NAVIGATION -->
+        <nav class="main-nav" id="mainNav">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">O HOTEL</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="quartos.html" class="nav-link">QUARTOS <span class="dropdown-arrow">▼</span></a>
+                    <ul class="submenu">
+                        <li><a href="quartos.html#standard">Quartos Standard</a></li>
+                        <li><a href="quartos.html#superior">Quartos Superior</a></li>
+                        <li><a href="quartos.html#suite">Suites</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="restaurante.html" class="nav-link">RESTAURANTE</a>
+                </li>
+                <li class="nav-item">
+                    <a href="eventos.html" class="nav-link">EVENTOS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="galeria.html" class="nav-link">GALERIA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contactos.html" class="nav-link">CONTACTOS</a>
+                </li>
+            </ul>
+
+            <a href="#reservar" class="btn-reserva">RESERVAR</a>
+        </nav>
+    </div>
 </header>
 
+<!-- HERO SECTION -->
 <section class="hero">
-    <div class="overlay">
-        <h4>A NOSSA HISTÓRIA</h4>
-        <h1>Uma tradição de hospitalidade em Melgaço há várias gerações.</h1>
-        <p>Mais do que um hotel, somos uma história de família que atravessa gerações, sempre com o mesmo propósito: receber bem e fazer sentir em casa.</p>
+    <div class="hero-content">
+        <div class="hero-text">
+            <h4 class="hero-subtitle">A NOSSA HISTÓRIA</h4>
+            <h1 class="hero-title">Uma tradição de hospitalidade em Melgaço há várias gerações.</h1>
+            <p class="hero-description">Mais do que um hotel, somos uma história de família que atravessa gerações, sempre com o mesmo propósito: receber bem e fazer sentir em casa.</p>
+        </div>
     </div>
 </section>
 
+<!-- TIMELINE SECTION -->
 <section class="timeline">
     <h2>A Nossa História</h2>
     <div class="timeline-cards">
@@ -65,6 +118,7 @@
     </div>
 </section>
 
+<!-- STORY SECTION -->
 <section class="story">
     <article>
         <div class="story-icon">🏛️</div>
@@ -97,6 +151,7 @@
     </article>
 </section>
 
+<!-- CTA SECTION -->
 <section class="cta" id="reservar">
     <div class="cta-content">
         <div>
@@ -107,6 +162,7 @@
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <p><strong>Hotel Boavista</strong></p>
     <p>📍 Melgaço, Portugal</p>
@@ -114,5 +170,6 @@
     <p>✉ reservas@hotelboavista.pt</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
